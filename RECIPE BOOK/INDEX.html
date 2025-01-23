@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Recipe Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Traditional UK Recipes</h1>
+            <p>Discover the taste of the United Kingdom</p>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="slider">
+            <img src="images/english_breakfast.jpg" alt="English Breakfast">
+            <img src="images/fish_and_chips.jpg" alt="Fish and Chips">
+            <img src="images/sticky_toffee_pudding.jpg" alt="Sticky Toffee Pudding">
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#breakfast">Breakfast</a></li>
+            <li><a href="#main">Main Courses</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+        </ul>
+    </nav>
+
+    <section id="breakfast">
+        <h2>Breakfast Recipes</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <img src="images/english_breakfast.jpg" alt="English Breakfast">
+                <h3>Full English Breakfast</h3>
+                <p>A hearty plate with bacon, sausages, eggs, and baked beans.</p>
+            </div>
+            <div class="recipe">
+                <img src="images/porridge.jpg" alt="Porridge">
+                <h3>Porridge</h3>
+                <p>A classic bowl of warm oats, perfect for chilly mornings.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="main">
+        <h2>Main Courses</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <img src="images/fish_and_chips.jpg" alt="Fish and Chips">
+                <h3>Fish and Chips</h3>
+                <p>Golden battered fish served with thick-cut chips.</p>
+            </div>
+            <div class="recipe">
+                <img src="images/shepherds_pie.jpg" alt="Shepherd's Pie">
+                <h3>Shepherd's Pie</h3>
+                <p>A comforting dish with minced lamb, vegetables, and mashed potato topping.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="desserts">
+        <h2>Desserts</h2>
+        <div class="recipe-container">
+            <div class="recipe">
+                <img src="images/sticky_toffee_pudding.jpg" alt="Sticky Toffee Pudding">
+                <h3>Sticky Toffee Pudding</h3>
+                <p>A rich sponge cake made with dates, served with toffee sauce.</p>
+            </div>
+            <div class="recipe">
+                <img src="images/scones.jpg" alt="Scones">
+                <h3>Scones</h3>
+                <p>Perfect with clotted cream and jam for afternoon tea.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: recipes@uktradition.com</p>
+        <p>Follow us on social media:</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let index = 0;
+        const slider = document.querySelector('.slider');
+        const images = document.querySelectorAll('.slider img');
+        const totalImages = images.length;
+
+        setInterval(() => {
+            index = (index + 1) % totalImages;
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }, 3000);
+    </script>
+</body>
+</html>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Email: recipes@uktradition.com</p>
+        <p>Follow us on social media:</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
