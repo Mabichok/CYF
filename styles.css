@@ -1,0 +1,137 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #000428, #004e92);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.invitation {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    }
+}
+
+.invitation-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FF8C00;
+    }
+    to {
+        text-shadow: 0 0 20px #FFD700, 0 0 40px #FF4500;
+    }
+}
+
+.invitation-details h2 {
+    font-size: 1.8rem;
+    color: #FF69B4;
+    margin-bottom: 1rem;
+}
+
+.invitation-details p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.invitation-footer p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.rsvp-button {
+    background: linear-gradient(to right, #FF0080, #FF8C00);
+    border: none;
+    padding: 0.8rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s;
+}
+
+.rsvp-button:hover {
+    background: linear-gradient(to right, #FF4500, #FFD700);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.rsvp-button:active {
+    transform: scale(0.95);
+}
+
+/* Neon Countdown Timer */
+.countdown {
+    font-size: 2rem;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+    margin-top: 1rem;
+    animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Background Lights */
+.lights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.light {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    animation: move 10s linear infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
